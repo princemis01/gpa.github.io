@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator (Prince Mishra) </title>
+    <link rel="stylesheet" href="Formating.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GPA Calculator</h1>
+        <form id="gpaForm">
+          <div id="subjects">
+            
+            <div class="subject">
+              <input type="text" placeholder="Subject Name" class="subject-name" required>
+              <input type="number" placeholder="Marks (%)" class="marks" min="0" max="100" required>
+              <input type="number" placeholder="Credits" class="credits" min="1" required>
+              <button type="button" class="removeSubject">Remove</button>
+            </div>
+          </div>
+          <button type="button" id="addSubject">Add Subject</button>
+          <button type="button" id="calculateGPA">Calculate GPA</button>
+        </form>
+        <div id="result">
+          <h2>Your GPA: <span id="gpaOutput">0.00</span></h2>
+        </div>
+      </div>
+      <script src="script_1.js"></script>
+      
+</body>
+</html>           

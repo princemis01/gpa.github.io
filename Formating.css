@@ -1,0 +1,137 @@
+/* General body styling with improved background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff7b7b, #ff5252);
+    animation: grain-animation 0.5s steps(10) infinite;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  @keyframes grain-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+  }
+  
+  /* Enlarged container for the calculator */
+  .container {
+    max-width: 600px; /* Increased width for better spacing */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Subject container */
+  .subject {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  /* Input fields styling */
+  .subject input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .subject .marks,
+  .subject .credits {
+    width: 100px; /* Ensures marks and credits have sufficient width */
+  }
+  
+  /* Buttons */
+  button {
+    padding: 12px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Add Subject and Calculate GPA buttons */
+  button#addSubject, 
+  button#calculateGPA {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  button#addSubject:hover, 
+  button#calculateGPA:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Remove button */
+  button.removeSubject {
+    background-color: #ff5b5b;
+    color: white;
+    flex: 0 0 40px; /* Fixed size to prevent overflow */
+    text-align: center;
+  }
+  
+  button.removeSubject:hover {
+    background-color: #b30000;
+  }
+  
+  /* Animated line effect */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    pointer-events: none;
+    animation: line-flow 2s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes line-flow {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Result box styling */
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e0f7fa;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007BFF;
+  }
+footer{
+    align-items: end;
+}  
